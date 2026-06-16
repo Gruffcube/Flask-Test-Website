@@ -1,0 +1,21 @@
+[project]
+name = "my-web-app"
+version = "0.1.0"
+description = "Simple Flask Web Application"
+requires-python = ">=3.9"
+dependencies = [
+    "flask>=3.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "python-dotenv",
+]
+
+# === Src Layout Configuration ===
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["my_web_app*"]
+
+[tool.setuptools.package-dir]
+"" = "src"
