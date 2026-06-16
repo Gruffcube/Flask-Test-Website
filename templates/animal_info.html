@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Animal Information{% endblock %}
+
+{% block content %}
+        
+        <h1>Animal Information</h1><br>
+            
+            <h2>Lion</h2>
+                
+                <img src="{{url_for('static',filename='images/lion.jpg')}}" alt="A photo of a lion">
+                
+                <p>A carnivorous big cat. Lives in Africa and India. Very dangerous.</p>
+                
+                
+            <h2>Zebra</h2>
+                
+                <img src="{{url_for('static',filename='images/zebra.webp')}}" alt="A photo of a zebra">
+                
+                <p>A striped horse-like animal. Herbivorous.</p>
+
+{% endblock %}

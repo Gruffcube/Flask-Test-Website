@@ -1,26 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
+
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}My Web App{% endblock %}</title>
+    <title>{% block title %}Rowan's Website{% endblock %}</title>
     
     <!-- Link to CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
 </head>
+
+
+
 <body>
+    
     <nav>
+        
         <a href="{{ url_for('main.index') }}">Home</a>
-        <a href="{{ url_for('main.about') }}">About</a>
-        <a href="{{ url_for('main.lipsum') }}">Lipsum</a>
-        <a href="{{ url_for('main.submit_task') }}">Feedback Form</a>
+        <a href="{{ url_for('main.animals') }}">Animal Information</a>
+        <a href="{{ url_for('main.survey') }}">Complete A Quick Survey</a>
+        
     </nav>
-
-    <main>
-        {% block content %}{% endblock %}   <!-- Child pages will fill this -->
-    </main>
-
-    <!-- Link to JavaScript -->
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    
+    {% block content %}
+    
+    {% endblock %}
+    
 </body>
+
+<footer>
+    
+    <br><br><hr><br>
+    
+    <p>Created by Rowan Middleton</p>
+    <p><a href="mailto:rowanijmiddleton@gmail.com">rowanijmiddleton@gmail.com</a></p>
+
+</footer>
+
+
 </html>
