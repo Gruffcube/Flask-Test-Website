@@ -1,5 +1,0 @@
-flask>=3.0.0
-english-words>=2.0.0
-
-[dev]
-python-dotenv
