@@ -15,7 +15,7 @@ py -3.13 -m venv .venv --clear && ^
 
 Now run `pip install -e .` or `pip install -e .` if you want debug information. 
 
-Now you can simple run the project with `python run.py`
+Now you can run the project with `python run.py`
 
 ### Linux
 
@@ -30,7 +30,7 @@ source .venv/bin/activate
 
 Now run `pip install -e .` or `pip install -e .` if you want debug information.
 
-Now you can simple run the project with `python run.py`
+Now you can run the project with `python run.py`
 
 
 
