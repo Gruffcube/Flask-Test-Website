@@ -1,0 +1,26 @@
+body {
+    background-color: #ffffff;
+    color: black;
+}
+
+header, footer, .box_widget, table, th, td, p, h1, h2, h3, h4, h5, h6 {
+    background-color: #999999;
+    border-color: black;
+}
+
+hr {
+    color: black;
+}
+
+img {
+    border-color: black;
+}
+
+nav a {
+    background: #cccccc;
+    border-color: black;
+}
+
+input[type=text], input[type=number], input[type=email], input[type=submit], input[type=password] {
+    border-color: #737373;
+}

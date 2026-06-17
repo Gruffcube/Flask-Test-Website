@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}Past Survey Results{% endblock %}
+
+
+
+{% block content %}
+
+<h1>Past Survey Results</h1>
+    
+    {% for result in results %}
+    
+    <div>
+        
+        <table>
+            
+            <tr>
+                <td>First name:</td>
+                <td>{{ result.fname }}</td>
+            </tr>
+            
+            <tr>
+                <td>Last name:</td>
+                <td>{{ result.lname }}</td>
+            </tr>
+            
+            <tr>
+                <td>Age:</td>
+                <td>{{ result.age }}</td>
+            </tr>
+            
+            <tr>
+                <td>Email:</td>
+                <td>{{ result.email }}</td>
+            </tr>
+            
+            <tr>
+                <td>Gender:</td>
+                <td>{{ result.gender }}</td>
+            </tr>
+            
+            <tr>
+                <td>Favourite Colour:</td>
+                <td>{{ result.colour }}</td>
+            </tr>
+            
+            <tr>
+                <td>Marital Status:</td>
+                <td>{{ result.marital_status }}</td>
+            </tr>
+            
+            <tr>
+                <td>Ethnicity:</td>
+                <td>{{ result.ethnicity }}</td>
+            </tr>
+            
+        </table>
+        
+    </div>
+    
+    {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+
+
+{% block title %}My Account{% endblock %}
+
+
+
+{% block content %}
+
+
+
+
+{% if access_token is not none %}
+
+<h1>My Account</h1>
+
+<div class="box_widget">
+
+<form>
+    <a href="{{ url_for('main.logout') }}"><h2>Log Out</h2></a>
+</form>
+
+</div>
+
+
+
+{% else %}
+
+<h1>Sign Up Or Log In</h1>
+
+<div class="box_widget">
+
+    <a href="{{ url_for('main.log_in') }}"><h2>Log In</h2></a>
+    <a href="{{ url_for('main.sign_up') }}"><h2>Sign Up / Register</h2></a>
+
+</div>
+
+{% endif %}
+
+
+
+{% endblock %}

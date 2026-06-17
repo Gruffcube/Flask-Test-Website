@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+
+
+{% block title %}Sign Up{% endblock %}
+
+
+
+{% block content %}
+
+    <h1>Log In</h1>
+    
+    <form method="POST" action="{{ url_for('main.log_in') }}">
+    
+        <div class='box_widget'>
+            
+            <label for="email">Email address:</label>
+            <input type="text" id="email" name="email" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+            
+        </div>
+        
+        
+        <input type="submit" value="Log In">
+    
+    </form>
+    
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+
+{% endblock %}

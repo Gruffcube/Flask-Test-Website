@@ -4,5 +4,6 @@ Version: 0.1.0
 Summary: Simple Flask Web Application
 Requires-Python: >=3.9
 Requires-Dist: flask>=3.0.0
+Requires-Dist: english-words>=2.0.0
 Provides-Extra: dev
 Requires-Dist: python-dotenv; extra == "dev"

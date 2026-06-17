@@ -1,0 +1,129 @@
+body {
+    padding: 5px;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+header, footer, .box_widget, table, th, td, p, h1, h2, h3, h4, h5, h6, input, nav a {
+    box-sizing: border-box;
+}
+
+header {
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    border-style: outset;
+    border-width: 3px;
+    box-shadow: 10px 10px 8px black;
+}
+
+footer {
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    border-style: outset;
+    border-width: 4px;
+    box-shadow: 10px 10px 8px black;
+}
+
+.box_widget, img {
+    padding: 10px;
+    border-radius: 10px;
+    border-style: outset;
+    border-width: 3px;
+    box-shadow: 4px 4px 4px black;
+}
+
+table, th, td {
+    padding: 6px;
+    border-radius: 15px;
+    border-style: outset;
+    border-width: 2px;
+    box-shadow: 4px 4px 4px black;
+}
+
+img {
+    border-style: outset;
+    margin: 0px;
+    margin-left: 48px;
+}
+
+input {
+    margin: 3px;
+    padding: 3px;
+    box-shadow: 5px 5px 8px black;
+}
+
+input[type=text], input[type=number], input[type=email], input[type=submit], input[type=password] {
+    border-style: outset;
+    border-width: 3px;
+    border-radius: 8px;
+}
+
+input[type=submit] {
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+input[type=radio] {
+    width: 25px;
+    height: 25px;
+}
+
+a {
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+nav a {
+    padding: 8px;
+    border-radius: 8px;
+    margin: 6px;
+    margin-top: 10px;
+    margin-bottom: 6px;
+    border-style: outset;
+    border-width: 2px;
+    box-shadow: 2px 2px 2px black;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    padding: 10px;
+    border-radius: 10px;
+    border-style: outset;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    border-width: 3px;
+    box-shadow: 6px 6px 6px black;
+}
+
+p {
+    padding: 5px;
+    border-radius: 6px;
+    border-width: 2px;
+    box-shadow: 3px 3px 3px black;
+}
+
+h2, h3, h4, h5, h6 {
+    margin-left: 16px;
+}
+
+.body_text {
+    margin-left: 32px;
+}
+
+hr {
+    box-shadow: 3px 3px 2px black;
+}

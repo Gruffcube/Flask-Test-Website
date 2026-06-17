@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+
+
+{% block title %}Random Words{% endblock %}
+
+
+
+{% block content %}
+
+<h1>Generated {{ word_list | length }} Random Words</h1>
+
+
+{% for word in word_list %}
+
+    <div class="box_widget">
+        
+        Word {{ loop.index }}: {{ word }}
+        
+    </div>
+
+{% endfor %}
+
+{% endblock %}

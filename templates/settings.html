@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Settings{% endblock %}
+
+
+{% block content %}
+
+<h1>Settings</h1>
+    
+        <form method="POST" action="{{ url_for('main.settings') }}">
+            
+            <div class="box_widget">
+                
+                <p>Select a theme:</p>
+        
+                <input type="radio" id="light_mode" name="theme" value="light" required {% if theme == 'light' %} checked {% endif %}>
+                <label for="light_mode">Light Mode</label><br>
+                
+                <input type="radio" id="dark_mode" name="theme" value="dark" required {% if theme == 'dark' %} checked {% endif %}>
+                <label for="dark_mode">Dark Mode</label><br>
+                
+                <input type="radio" id="colourful_mode" name="theme" value="colourful" required {% if theme == 'colourful' %} checked {% endif %}>
+                <label for="colourful_mode">Colourful Mode (the hideous one)</label><br><br>
+                
+            </div>
+            
+            <input type="submit" value="Save Settings">
+            
+        </form>
+        
+        
+    
+
+{% endblock %}

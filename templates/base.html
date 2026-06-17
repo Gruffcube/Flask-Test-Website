@@ -4,27 +4,47 @@
 
 
 <head>
-    
+        
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Rowan's Website{% endblock %}</title>
     
-    <!-- Link to CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/style.css') }}">
+    
+    {% if theme == "dark" %}
+        <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/dark_mode.css') }}">
+    
+    {% elif theme == "light" %}
+        <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/light_mode.css') }}">
+        
+    {% elif theme == "colourful" %}
+        <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/colourful_mode.css') }}">
+        
+    {% endif %}
     
 </head>
 
 
 
-<body>
+<header>
     
     <nav>
         
         <a href="{{ url_for('main.index') }}">Home</a>
         <a href="{{ url_for('main.animals') }}">Animal Information</a>
         <a href="{{ url_for('main.survey') }}">Complete A Quick Survey</a>
+        <a href="{{ url_for('main.random_words') }}">Generate Random Words</a>
+        <a href="{{ url_for('main.past_survey_results') }}">View Past Survey Results</a>
+        <a href="{{ url_for('main.settings') }}">Settings</a>
+        <a href="{{ url_for('main.my_account') }}">My Account</a>
         
     </nav>
+    
+</header>
+
+
+
+<body>
     
     {% block content %}
     
@@ -32,14 +52,15 @@
     
 </body>
 
+
+
 <footer>
-    
-    <br><br><hr><br>
     
     <p>Created by Rowan Middleton</p>
     <p><a href="mailto:rowanijmiddleton@gmail.com">rowanijmiddleton@gmail.com</a></p>
-
+    
 </footer>
+
 
 
 </html>
