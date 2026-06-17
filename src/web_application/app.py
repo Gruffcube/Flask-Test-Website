@@ -13,7 +13,7 @@ def create_app():
     
     app.config.from_object(Config)
     
-    app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=30)
+    app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=36525)
     
     app.register_blueprint(main_bp)
 

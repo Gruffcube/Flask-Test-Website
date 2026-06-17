@@ -12,6 +12,8 @@ main_bp = Blueprint('main', __name__)
 
 @main_bp.context_processor
 def inject_global_data():
+    session.permanent = True
+    
     current_theme = session.get('theme', 'light')
     access_token = session.get('access_token', None)
     user_id = session.get('user_id', None)
@@ -139,9 +141,6 @@ def settings():
     if request.method == "POST":
         theme = request.form.get('theme')
         enlarged_text = request.form.get('enlarged_text')
-        
-        session.permanent = True
-        
         
         session['theme'] = theme
         session['enlarged_text'] = enlarged_text
