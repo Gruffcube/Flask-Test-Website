@@ -4,17 +4,16 @@
 
 {% block content %}
     
-    <h1>User Survey</h1><br>
+    <h1>User Survey</h1>
         
         {% if success %}
             <p>Survey submitted</p>
         
         {% else %}
         
-            <p>Please complete the survey below. Your inputs are public. </p>
+            <p>Please complete the survey below. Your inputs are public.</p>
             
             <form method="POST" action="{{ url_for('main.survey') }}">
-                
                 
                 <div class="box_widget">
                     

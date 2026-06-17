@@ -54,7 +54,7 @@ img {
 input {
     margin: 3px;
     padding: 3px;
-    box-shadow: 5px 5px 8px black;
+    box-shadow: 4px 4px 4px black;
 }
 
 input[type=text], input[type=number], input[type=email], input[type=submit], input[type=password] {
@@ -64,15 +64,17 @@ input[type=text], input[type=number], input[type=email], input[type=submit], inp
 }
 
 input[type=submit] {
-    width: 250px;
-    height: 50px;
+    border-radius: 18px;
     font-size: 20px;
     font-weight: bold;
+    padding: 15px;
+    margin: 15px;
 }
 
 input[type=radio] {
     width: 25px;
     height: 25px;
+    box-shadow: 2px 2px 2px black;
 }
 
 a {
@@ -107,6 +109,7 @@ p, h1, h2, h3, h4, h5, h6 {
 h1, h2, h3, h4, h5, h6 {
     border-width: 3px;
     box-shadow: 6px 6px 6px black;
+    margin-bottom: 3px;
 }
 
 p {
