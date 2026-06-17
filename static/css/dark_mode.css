@@ -3,7 +3,7 @@ body {
     color: white;
 }
 
-nav a, header, footer, .box_widget, table, th, td, p, h1, h2, h3, h4, h5, h6 {
+img, nav a, header, footer, .box_widget, table, th, td, p, h1, h2, h3, h4, h5, h6 {
     background-color: #404040;
     border-color: white;
 }
@@ -12,9 +12,6 @@ hr {
     color: white;
 }
 
-img {
-    border-color: white;
-}
 
 input[type=text], input[type=number], input[type=email], input[type=submit], input[type=password] {
     border-color: white;

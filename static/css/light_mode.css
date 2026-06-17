@@ -1,9 +1,9 @@
 body {
-    background-color: #ffffff;
+    background-color: #d9d9d9;
     color: black;
 }
 
-header, footer, .box_widget, table, th, td, p, h1, h2, h3, h4, h5, h6 {
+img, header, footer, .box_widget, table, th, td, p, h1, h2, h3, h4, h5, h6 {
     background-color: #999999;
     border-color: black;
 }
@@ -12,9 +12,6 @@ hr {
     color: black;
 }
 
-img {
-    border-color: black;
-}
 
 nav a {
     background: #cccccc;

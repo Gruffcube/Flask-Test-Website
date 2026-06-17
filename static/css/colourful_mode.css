@@ -3,7 +3,7 @@ body {
     color: white;
 }
 
-header, footer, .box_widget, table, th, td, p, h1, h2, h3, h4, h5, h6 {
+img, header, footer, .box_widget, table, th, td, p, h1, h2, h3, h4, h5, h6 {
     background-color: #0000ff;
     border-color: black;
 }
@@ -12,9 +12,6 @@ hr {
     color: yellow;
 }
 
-img {
-    border-color: black;
-}
 
 a {
     color: lime;

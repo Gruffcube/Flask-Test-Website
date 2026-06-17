@@ -27,8 +27,7 @@ def inject_global_data():
             session['user_id'] = None
             session['access_token'] = None
     
-    print(f"User ID: {user_id}")
-    print(f"Access Token: {access_token}")
+    
     
     return dict(theme=current_theme, access_token=access_token)
 
