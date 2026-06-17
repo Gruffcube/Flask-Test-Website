@@ -15,6 +15,7 @@ def inject_global_data():
     current_theme = session.get('theme', 'light')
     access_token = session.get('access_token', None)
     user_id = session.get('user_id', None)
+    enlarged_text = session.get('enlarged_text', 'false')
     
     
     if user_id is not None:
@@ -40,7 +41,7 @@ def inject_global_data():
     
     
     
-    return dict(theme=current_theme, access_token=access_token, full_name=full_name)
+    return dict(theme=current_theme, access_token=access_token, full_name=full_name, enlarged_text=enlarged_text)
 
 
 
@@ -137,11 +138,13 @@ def settings():
     
     if request.method == "POST":
         theme = request.form.get('theme')
+        enlarged_text = request.form.get('enlarged_text')
         
         session.permanent = True
         
         
         session['theme'] = theme
+        session['enlarged_text'] = enlarged_text
         
         
         return redirect(request.referrer or url_for('main.index'))

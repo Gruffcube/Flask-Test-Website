@@ -24,6 +24,18 @@
                 
             </div>
             
+            <div class="box_widget">
+            
+                <p>Use enlarged text?</p>
+        
+                <input type="radio" id="yes_enlarged_text" name="enlarged_text" value="true" required {% if enlarged_text == 'true' %} checked {% endif %}>
+                <label for="yes_enlarged_text">Yes</label><br>
+                
+                <input type="radio" id="no_enlarged_text" name="enlarged_text" value="false" required {% if enlarged_text == 'false' %} checked {% endif %}>
+                <label for="no_enlarged_text">No</label><br>
+                
+            </div>
+            
             <input type="submit" value="Save Settings">
             
         </form>
