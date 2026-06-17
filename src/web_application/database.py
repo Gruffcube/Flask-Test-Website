@@ -4,11 +4,18 @@ import hashlib
 from contextlib import contextmanager
 from secrets import token_hex
 import time
+import os
 
 
 @contextmanager
 def get_db_connection():
-    DATABASE_FILE = Path('instance', 'user_database.db')
+    CURRENT_DIR = Path(__file__).resolve().parent.parent.parent
+    
+    DATABASE_FILE = CURRENT_DIR / 'instance' / 'user_database.db'
+    
+    print(f"Database file: {DATABASE_FILE}")
+    
+    os.makedirs(DATABASE_FILE.parent, exist_ok=True)
     
     conn = sq.connect(DATABASE_FILE)
     
