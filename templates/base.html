@@ -38,6 +38,11 @@
         <a href="{{ url_for('main.settings') }}">Settings</a>
         <a href="{{ url_for('main.my_account') }}">My Account</a>
         
+        {% if full_name %}
+            <p>Logged in as {{ full_name }}</p>
+        
+        {% endif %}
+        
     </nav>
     
 </header>

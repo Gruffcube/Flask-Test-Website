@@ -26,10 +26,21 @@ def inject_global_data():
             
             session['user_id'] = None
             session['access_token'] = None
+            
+            user_id = None
+            access_token = None
+    
+    
+    if user_id is not None:
+        fname, lname = db.get_first_last_name_from_user_id(user_id)
+        full_name=f"{fname.title()} {lname.title()}"
+    
+    else:
+        full_name = None
     
     
     
-    return dict(theme=current_theme, access_token=access_token)
+    return dict(theme=current_theme, access_token=access_token, full_name=full_name)
 
 
 

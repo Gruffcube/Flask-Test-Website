@@ -167,6 +167,21 @@ def remove_access_token(user_id, token):
 
 
 
+def get_first_last_name_from_user_id(user_id):
+    with get_db_connection() as conn:
+        fetched_data = conn.execute("""
+            SELECT first_name, last_name FROM user_accounts WHERE
+            user_id = ?
+        """, (user_id,)).fetchone()
+        
+    if fetched_data is not None:
+        return (fetched_data['first_name'], fetched_data['last_name'])
+    
+    else:
+        return ("john", "doe")
+
+
+
 init_db()
 
 
