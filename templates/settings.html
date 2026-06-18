@@ -11,7 +11,7 @@
             
             <div class="box_widget">
                 
-                <p>Select a theme:</p>
+                <h2>Select a theme:</h2>
         
                 <input type="radio" id="light_mode" name="theme" value="light" required {% if theme == 'light' %} checked {% endif %}>
                 <label for="light_mode">Light Mode</label><br>
@@ -19,14 +19,11 @@
                 <input type="radio" id="dark_mode" name="theme" value="dark" required {% if theme == 'dark' %} checked {% endif %}>
                 <label for="dark_mode">Dark Mode</label><br>
                 
-                <input type="radio" id="colourful_mode" name="theme" value="colourful" required {% if theme == 'colourful' %} checked {% endif %}>
-                <label for="colourful_mode">Colourful Mode (the hideous one)</label><br><br>
-                
             </div>
             
             <div class="box_widget">
             
-                <p>Use enlarged text?</p>
+                <h2>Use enlarged text?</h2>
         
                 <input type="radio" id="yes_enlarged_text" name="enlarged_text" value="true" required {% if enlarged_text == 'true' %} checked {% endif %}>
                 <label for="yes_enlarged_text">Yes</label><br>

@@ -9,22 +9,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Rowan's Website{% endblock %}</title>
     
-    <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/style.css') }}?v=2">
     
     {% if theme == "dark" %}
-        <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/dark_mode.css') }}">
+        <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/dark_mode.css') }}?v=2">
     
     {% elif theme == "light" %}
-        <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/light_mode.css') }}">
-        
-    {% elif theme == "colourful" %}
-        <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/colourful_mode.css') }}">
+        <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/light_mode.css') }}?v=2">
         
     {% endif %}
     
     
     {% if enlarged_text == 'true' %}
-        <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/enlarged_text.css') }}">
+        <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/enlarged_text.css') }}?v=2">
         
     {% endif %}
     
@@ -40,30 +37,38 @@
     
     <header>
         
-        <nav>
+        <div class="content_container">
+        
+            <nav>
+                
+                <a href="{{ url_for('main.index') }}">Home</a>
+                <a href="{{ url_for('main.animals') }}">Animal Information</a>
+                <a href="{{ url_for('main.survey') }}">Complete A Quick Survey</a>
+                <a href="{{ url_for('main.random_words') }}">Generate Random Words</a>
+                <a href="{{ url_for('main.past_survey_results') }}">View Past Survey Results</a>
+                <a href="{{ url_for('main.settings') }}">Settings</a>
+                <a href="{{ url_for('main.my_account') }}">My Account</a>
+                
+            </nav>
             
-            <a href="{{ url_for('main.index') }}">Home</a>
-            <a href="{{ url_for('main.animals') }}">Animal Information</a>
-            <a href="{{ url_for('main.survey') }}">Complete A Quick Survey</a>
-            <a href="{{ url_for('main.random_words') }}">Generate Random Words</a>
-            <a href="{{ url_for('main.past_survey_results') }}">View Past Survey Results</a>
-            <a href="{{ url_for('main.settings') }}">Settings</a>
-            <a href="{{ url_for('main.my_account') }}">My Account</a>
+            <br><hr><br>
             
-        </nav>
+            {% if full_name %}
+                <p>Logged in as {{ full_name }}</p>
+            
+            {% endif %}
         
-        <br><hr><br>
-        
-        {% if full_name %}
-            <p>Logged in as {{ full_name }}</p>
-        
-        {% endif %}
+        </div>
         
     </header>
-
-        {% block content %}
         
-        {% endblock %}
+        <div class="content_container">
+        
+            {% block content %}
+            
+            {% endblock %}
+            
+        </div>
         
     <footer>
         

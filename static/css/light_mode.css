@@ -1,23 +1,12 @@
-body {
-    background-color: #d9d9d9;
-    color: black;
-}
-
-img, header, footer, .box_widget, table, th, td, p, h1, h2, h3, h4, h5, h6 {
-    background-color: #999999;
-    border-color: black;
-}
-
-hr {
-    color: black;
-}
-
-
-nav a {
-    background: #cccccc;
-    border-color: black;
-}
-
-input[type=text], input[type=number], input[type=email], input[type=submit], input[type=password] {
-    border-color: #737373;
+:root {
+    --shadow-color: grey;
+    --background-color: #f2f2f2;
+    --content-background-color: #e6e6e6;
+    --box-widget-color: #d9d9d9;
+    --header-color: white;
+    --footer-color: white;
+    --text-color: black;
+    --button-color: #666666;
+    --button-text-color: white;
+    --body-font: 'Roboto', Arial, sans-serif;
 }
