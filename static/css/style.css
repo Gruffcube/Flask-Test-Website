@@ -1,3 +1,8 @@
+a {
+    color: var(--hyperlink-color);
+}
+
+
 header, footer {
     box-sizing: border-box;
     width: 100%;
