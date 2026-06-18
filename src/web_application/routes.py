@@ -10,7 +10,7 @@ main_bp = Blueprint('main', __name__)
 
 
 
-@main_bp.context_processor
+@main_bp.app_context_processor
 def inject_global_data():
     session.permanent = True
     
@@ -44,6 +44,12 @@ def inject_global_data():
     
     
     return dict(theme=current_theme, access_token=access_token, full_name=full_name, enlarged_text=enlarged_text)
+
+
+
+@main_bp.app_errorhandler(404)
+def not_found(e):
+    return render_template('404.html')
 
 
 
