@@ -7,17 +7,16 @@ header, footer {
     box-sizing: border-box;
     width: 100%;
     padding: 10px;
+    box-shadow: 0px 0px 15px var(--shadow-color);
 }
 
 
 header {
-    box-shadow: 0px 10px 10px var(--shadow-color);
     background: var(--header-color)
 }
 
 
 footer {
-    box-shadow: 0px -10px 10px var(--shadow-color);
     background: var(--footer-color);
 }
 
@@ -35,7 +34,7 @@ body {
     max-width: 1200px;
     width: 90%;
     margin: 0 auto;
-    padding: 20px 10px;
+    padding: 20px 15px;
     box-sizing: border-box;
 }
 
@@ -50,15 +49,12 @@ body > .content_container {
 }
 
 
-body > .content_container {
-
-}
-
-
 .box_widget {
     padding: 10px;
     margin-top: 30px;
     margin-bottom: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
     background: var(--box-widget-color);
     box-shadow: 0px 0px 10px var(--shadow-color);
     border: 0px solid;
@@ -77,7 +73,6 @@ header nav {
 header nav a {
     padding: 10px;
     text-align: center;
-
 }
 
 
@@ -88,6 +83,7 @@ header nav a, input[type='submit'] {
     background: var(--button-color);
     color: var(--button-text-color);
     font-weight: bold;
+    box-shadow: 0px 0px 8px var(--shadow-color);
 }
 
 input[type='text'], input[type='number'], input[type='password'], input[type='email'] {
