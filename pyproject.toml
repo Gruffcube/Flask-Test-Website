@@ -6,6 +6,8 @@ requires-python = ">=3.9"
 dependencies = [
     "flask>=3.0.0",
     "english-words>=2.0.0",
+    "readerwriterlock>=1.0.9",
+    
 ]
 
 [project.optional-dependencies]

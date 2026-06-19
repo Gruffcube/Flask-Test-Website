@@ -10,5 +10,6 @@
     --button-text-color: white;
     --body-font: 'Roboto', Arial, sans-serif;
     --hyperlink-color: blue;
-    --horizontal-rule-color: orange
+    --horizontal-rule-color: orange;
+    --table-item-color: #cccccc;
 }

@@ -3,6 +3,14 @@ import random
 import string
 from . import database as db
 from english_words import get_english_words_set
+from readerwriterlock import rwlock
+
+
+
+survey_rwlock = rwlock.RWLockFairD()
+past_survey_results_dict = {}
+word_pool = tuple(get_english_words_set(['web2'], lower=True))
+random_jargon = " oh and ".join(random.choice(word_pool) for i in range(random.randint(40000, 60000)))
 
 
 
@@ -67,9 +75,7 @@ def animals():
 
 
 @main_bp.route('/user-survey', methods=['POST', 'GET'])
-def survey():
-    global past_survey_results_dict
-    
+def survey():    
     success = False
     
     if request.method == 'POST':
@@ -100,16 +106,17 @@ def survey():
         
         print(result_string)
         
-        past_survey_results_dict[email] = {
-        'fname': fname,
-        'lname': lname,
-        'age': age,
-        'email': email,
-        'gender': gender,
-        'colour': colour,
-        'marital_status': marital_status,
-        'ethnicity': ethnicity
-        }
+        with survey_rwlock.gen_wlock():
+            past_survey_results_dict[email] = {
+            'fname': fname,
+            'lname': lname,
+            'age': age,
+            'email': email,
+            'gender': gender,
+            'colour': colour,
+            'marital_status': marital_status,
+            'ethnicity': ethnicity
+            }
         
         success = True
         
@@ -136,7 +143,10 @@ def random_words():
 
 @main_bp.route('/past-survey-results')
 def past_survey_results():
-    return render_template('past_survey_results.html', results=list(past_survey_results_dict.values()))
+    with survey_rwlock.gen_rlock():
+        results= list(past_survey_results_dict.values())
+        
+    return render_template('past_survey_results.html', results=results)
 
 
 
@@ -268,12 +278,6 @@ def logout():
     session['user_id'] = None
     
     return redirect(url_for('main.my_account'))
-
-
-
-past_survey_results_dict = {}
-word_pool = tuple(get_english_words_set(['web2'], lower=True))
-random_jargon = " oh and ".join(random.choice(word_pool) for i in range(random.randint(40000, 60000)))
 
 print(f"Word pool length: {len(word_pool)}")
 
