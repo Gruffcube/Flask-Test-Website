@@ -270,7 +270,7 @@ def log_in():
 
 
 
-@main_bp.route('/logout')
+@main_bp.route('/logout', methods=["POST"])
 def logout():
     db.remove_access_token(session['user_id'], session['access_token'])
     

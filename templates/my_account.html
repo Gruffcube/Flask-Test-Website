@@ -17,9 +17,9 @@
 
 <div class="box_widget">
 
-<form>
-    <a href="{{ url_for('main.logout') }}"><h2>Log Out</h2></a>
-</form>
+    <form method="POST" action="{{ url_for('main.logout') }}">
+        <input type="submit" value="Logout">
+    </form>
 
 </div>
 
@@ -31,13 +31,17 @@
 
 <div class="box_widget">
 
-    <a href="{{ url_for('main.log_in') }}"><h2>Log In</h2></a>
+    <form action="{{ url_for('main.log_in') }}" method="GET">
+        <input type="submit" value="Log In">
+    </form>
     
 </div>
 
 <div class="box_widget">
     
-    <a href="{{ url_for('main.sign_up') }}"><h2>Sign Up / Register</h2></a>
+    <form action="{{ url_for('main.sign_up') }}" method="GET">
+        <input type="submit" value="Sign Up / Register">
+    </form>
     
 </div>
 
